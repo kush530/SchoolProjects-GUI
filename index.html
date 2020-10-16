@@ -1,0 +1,183 @@
+<!--
+ File: /~kbpatel1/index.html
+ COMP.4060 Assignment 2: Creating Your First Web Page
+ Kush Patel, UMass Lowell Computer Science, kbpatel1@cs.uml.edu
+ Copyright (c) 2020 by Kush Patel. All rights reserved. May be
+freely
+ copied or excerpted for educational purposes with credit to the
+author.
+ updated by KP on October 15, 2020 at 8:24 PM
+
+ Description: This personal webpage will serve as a gateway to all other assignments
+              in this course.
+
+              - Added Bootstrap elements and updated page structure
+
+Validated with "https://validator.w3.org/"
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Kush Patel</title>
+        <link rel="stylesheet" href = "css/style.css"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   
+    </head>
+    <!--body follows similar style using sections on Traversy Media HTML Crash Course
+         "https://www.youtube.com/watch?v=UB1O30fR-EE&ab_channel=TraversyMedia"-->
+    <body>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+        <!--header containing navbar. Official Bootstrap documenation helped
+        Source: "https://getbootstrap.com/docs/4.0/components/navbar/"" -->
+        <header>
+          <nav class ="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">Kush Patel</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavItems" aria-controls="NavItems">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="NavItems">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#AboutMe">About Me</a></li>
+                    <li><a href="#Assignments">Assignments</a></li>
+                    <li><a href="#Courses">Courses</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    </ul>
+                </div>  
+              </div>
+          </nav>
+        </header>
+
+        <!--Added Jumbotron to display my name and course name. Learned of this class from
+        Traversy Media Bootstrap Crash Course: "https://www.youtube.com/watch?v=5GcQtLDGXy8"
+        Learned to use display headings from Bootstrap Documentation
+        Source: "https://getbootstrap.com/docs/4.0/content/typography/
+        Learned to add buttons from Boostrap Documentation as well
+        Source: "https://getbootstrap.com/docs/4.0/components/buttons/"
+        Learned mx-auto from Source:"https://getbootstrap.com/docs/4.0/utilities/spacing/""
+     -->
+        <div class="jumbotron text-center">
+            <div class="container">
+                <h1 class="display-1 text-uppercase font-weight-light">Kush Patel</h1>
+                <br>
+                <br>
+                <h1 class="display-4 font-italic">COMP.4610 Graphical User Interface Programming I</h1>
+
+                <a id="LearnMore" href="#AboutMe" class="btn btn-primary btn-lg mx-auto" role="button">Learn More</a>
+
+            </div>
+        </div>
+        <!--Used Bootstrap typography page to learn about centering text, as well images page for proper image placement
+        Source; "https://getbootstrap.com/docs/4.0/content/images/"
+        Source for image:Image Source: https://www.flaticon.com/free-icon/graduate_346460*/-->
+        <section id = AboutMe>
+            <h2 class="text-center">About Me</h2>
+            <img class="rounded mx-auto d-block" id = "Icon" src="images/graduation.png" alt="Student">
+            <p class="mx-auto">My name is Kush Patel, and I am a senior at the University of
+                Massachusetts Lowell, pursuing a major in Computer Science, as well as a Math minor. I have done
+                a Software Engineering coop at L3 Technologies Security and Detection, 
+                as well as an internship at AutoGuide Mobile Robotics, where I currently
+                work part time. I am currently taking Graphical User Interface, Database I, Organization of Programming Languages, Algorithms,
+                and Calculus III. Previous courses I've taken are listed below. My skill set includes C/C++, C#, and Python. This website
+                will host all of my assignments for my Graphical User Interface class. In my free time
+                I enjoy PC Gaming, watching Sci-FI movies, and lifting weights.</p>
+        </section>
+
+        <!--links to the other assignments. Changed to a div container to maintain proper image link spacing, and added image links
+        Image Source:"Icon source: "https://www.flaticon.com/free-icon/webpage_718110?term=webpage&page=1&position=10"*/"
+        A post by Zim on StackOverflow helped in centering the Assignment Icons within each column
+        Source:"https://stackoverflow.com/questions/42528411/center-the-content-inside-a-column-in-bootstrap-4"-->
+        <div class="container" id = Assignments>
+            <div class="container-fluid">
+                <h2 class="text-center">Assignments</h2>
+                <div class="row">
+                    <div class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 mx-auto">
+                        <div class="text-center">
+                            <A href = "HW1.html"><img src="images/hw-icon.png" width="200" height = "200" alt="AssignmentIcon"><span>Homework 1</span></A>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 mx-auto">
+                        <div class="text-center">
+                            <A href = "HW2/index.html"><img src="images/hw-icon.png" width="200" height = "200" alt="AssignmentIcon"><span>Homework 2</span></A>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 mx-auto">
+                        <div class="text-center">
+                            <A href = "HW3/index.html"><img src="images/hw-icon.png" width="200" height = "200" alt="AssignmentIcon"><span>Homework 3</span></A>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 mx-auto">
+                        <div class="text-center">
+                            <A href = "#"><img src="images/hw-icon.png" width="200" height = "200" alt="AssignmentIcon"><span>Homework 4</span></A>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 mx-auto">
+                        <div class="text-center">
+                            <A href = "HW1.html"><img src="images/hw-icon.png" width="200" height = "200" alt="AssignmentIcon"><span>Homework 5</span></A>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 mx-auto">
+                        <div class="text-center">
+                            <A href = "HW1.html"><img src="images/hw-icon.png" width="200" height = "200" alt="AssignmentIcon"><span>Homework 6</span></A>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 mx-auto">
+                        <div class="text-center">
+                            <A href = "HW1.html"><img src="images/hw-icon.png" width="200" height = "200" alt="AssignmentIcon"><span>Homework 7</span></A>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 mx-auto">
+                        <div class="text-center">
+                            <A href = "HW1.html"><img src="images/hw-icon.png" width="200" height = "200" alt="AssignmentIcon"><span>Homework 8</span></A>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!--Section describing previous courses I've taken.
+         Changed to Bootstrap List-->
+         <section id = Courses>
+            <h2 class="text-center">Courses Taken</h2>
+            <div class="container">
+                <ul class="list-group">
+                    <li class="list-group-item">Computing I - IV</li>
+                    <li class="list-group-item">Discrete Structures I-II</li>
+                    <li class="list-group-item">Probability and Stats</li>
+                    <li class="list-group-item">Computer Architecture</li>
+                    <li class="list-group-item">Foundations of Computer Science</li>
+                    <li class="list-group-item">Machine Learning</li>
+                    <li class="list-group-item">Assembly Language Programming</li>
+                    <li class="list-group-item">Calculus II</li>
+                    <li class="list-group-item">Logic Design</li>
+                </ul>
+            </div>
+        </section>
+        <!--provided email as contact info
+        Added attribution for FlatIcon images used-->
+        <section id = Contact>
+            <h2 class="text-center">Contact</h2>
+            <p class="text-center">Email: kush_patel2@student.uml.edu</p>
+            <!--Validation logo for CSS (couldn't find the one for HTML)-->
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:88px;height:31px"
+                        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                        alt="Valid CSS!" />
+               </a>
+           </p>
+           <div>
+            Icons made by <a href="https://www.flaticon.com/authors/dinosoftlabs" title="DinosoftLabs">DinosoftLabs</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+           </div>
+        </section>
+    </body>
+</html>

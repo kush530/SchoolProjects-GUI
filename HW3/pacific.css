@@ -1,0 +1,124 @@
+/*
+ File: /~kbpatel1/style.css
+ COMP.4060 Assignment 3: Style a Site with External CSS
+ Kush Patel, UMass Lowell Computer Science, kbpatel1@cs.uml.edu
+ Copyright (c) 2020 by Kush Patel. All rights reserved. May be
+freely
+ copied or excerpted for educational purposes with credit to the
+author.
+ updated by KP on September 29, 2020 at 2:38 PM
+
+ Description: Homework 3 CSS Styling
+*/
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+
+/*Positioned background to the right, and added corresponding color
+to the left to avoid stretching the background*/
+header {
+	background-image: url("sunset.jpg") ;
+	background-position:right;
+	background-repeat: no-repeat;
+	background-color:#000034;
+	color: #FFFFFF;
+}
+/*Added background and set page height for background to fill vertically
+without repeating. Learned to use VH from a Piazza thread.
+Source: https://piazza.com/class/kejdih9yz1z5s6?cid=25*/
+body {
+	background-image: url("ptrbackground.jpg");
+	background-size:contain;
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+	height:100vh;
+}
+
+/*Centered and set main content according to assignment specifications*/
+#wrapper{
+	margin-right: auto;
+	margin-left: auto;
+	width:80%;
+	min-width:600px;
+	background-color:#90c8e3;
+
+}
+/*Floated left to allow for text to flow around image*/
+#content img{
+	float:left;
+	padding-right: 30px;
+}
+
+/*Padded to acheive expected look. Added border with 
+color of navbar to acheive blue navbar effect. Same solution
+was also applied in the footer.*/
+#content{
+	padding: 10px 30px 40px 30px;
+	background-color:white;
+	border-left: 200px solid #90c8e3;
+	background-size:100px, 100px;
+
+}
+
+/*List bullets use image and are indented*/
+#content ul{
+	list-style-image:url("marker.gif");
+	list-style-position:inside;
+}
+
+/*Added float to allow other content to remain left of nevbar.*/
+nav{
+	float:left;
+	padding-right:40px;
+}
+/*Removed bullets from nav links*/
+nav ul {
+	font-size: 1.2em;
+	list-style-type:none;
+}
+nav a:visited {
+	color: #344873;
+}
+/*Styled nav links per assignment spec.*/
+nav a{
+	text-decoration:none;
+	font-weight:bold;
+	color:darkblue;
+}
+nav a:hover {
+	color: #FFFFFF;
+}
+h1 {
+	margin-bottom: 0;
+	padding: 10px;
+}
+h2 {
+	color: #3399CC;
+}
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+#contact {
+	font-size: 90%;
+}
+dt {
+	color: #000033;
+}
+/*Styled resort name according to assignment spec*/
+.resort{
+	color:#5e86a9;
+	font-weight:bold;
+}
+/*styled footer to acheive look in assignment screenshots*/
+footer {
+	background-color:white;
+	font-family: Georgia, "Times New Roman", serif;
+	font-style:italic;
+	font-size:10pt;
+	height:50px;
+	border-left: 200px solid #90c8e3;
+	padding-left: 30px;
+}
+

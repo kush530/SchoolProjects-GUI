@@ -1,0 +1,108 @@
+/*
+ File: /~kbpatel1/style.css
+ COMP.4060 Assignment 2: Creating Your First Web Page
+ Kush Patel, UMass Lowell Computer Science, kbpatel1@cs.uml.edu
+ Copyright (c) 2020 by Kush Patel. All rights reserved. May be
+freely
+ copied or excerpted for educational purposes with credit to the
+author.
+ updated by KP on September 22, 2020 at 9:23 AM
+
+ Description: CSS Styling for part 2 of Personal Webpage Assignment
+
+ Validated with "https://jigsaw.w3.org/"
+*/
+
+/*Removed underline from links and set text color to white */
+a{
+    text-decoration:none;
+    color: white;
+}
+/*Removed styling from lists to achieve a better look. Also set display to inline block to center lists within their respective sections.
+This StackOverflow post was helpful in implementing this, 
+answered by Matej Đaković: "https://stackoverflow.com/questions/30829916/how-can-i-center-my-ul-li-list-in-css" */
+ul {
+    display: inline-block;
+    text-align: left;
+    list-style: none;
+}
+/*Centered the header text, and added bottom padding so there is more space between header and following sections*/
+header{
+    text-align:center;
+    padding-bottom: 100px;
+}
+
+header p{
+    font-style: italic;
+}
+
+/*Sets my name in Header to a reasonable font for the title of the page*/
+header h1{
+
+    font-size: 40px;
+}
+
+/*All h1s are set to Sans-Serif, which I thought looked the best for a hearder font. Same goes for h2s*/
+h1{
+    font-family: sans-serif;
+}
+
+h2{
+    font-family: sans-serif;
+}
+
+/*Used background image from "https://www.pexels.com/photo/snow-top-mountain-under-clear-sky-1054218/". 
+Used White Segoe UI font for all text*/
+body
+{
+    background-image: url("../images/mountain.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    font-family: 'Segoe UI';
+    text-align:center;
+}
+
+/*Floated each section to stay next to each other. Traversy Media CSS Crash Course had a helpful segment on using floating 
+"https://www.youtube.com/watch?v=yfoY53QXEnI&ab_channel=TraversyMedia"*/
+#AboutMe{
+    float: left;
+    width: 40%;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+#Assignments{
+    float: left;
+    width: 10%;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#Courses{
+    float: left;
+    padding: 20px;
+    width: 30%;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+/*Set high top padding to keep Contact info further down the bottom of the page. Traversy CSS Crash Course was 
+helpful again in clearing the floats from the previous sections*/
+#Contact
+{
+    padding-top: 200px;
+    clear:both;
+    text-align: center;
+}
+
+/*W3Schools was helpful in configurating text-shadow to make contact info readable against the section
+of background it overlaps "https://www.w3schools.com/cssref/css3_pr_text-shadow.asp"*/
+#Contact p{
+    color: white;
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+    font-style: italic;
+}

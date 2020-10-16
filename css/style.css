@@ -1,0 +1,177 @@
+/*
+ File: /~kbpatel1/style.css
+ COMP.4060 Assignment 2: Creating Your First Web Page
+ Kush Patel, UMass Lowell Computer Science, kbpatel1@cs.uml.edu
+ Copyright (c) 2020 by Kush Patel. All rights reserved. May be
+freely
+ copied or excerpted for educational purposes with credit to the
+author.
+ updated by KP on October 15, 2020 at 8:24 PM
+
+ Description: CSS Styling for part 2 of Personal Webpage Assignment
+ - Added new changes for Bootstrap elements, along with updates to
+ previous styles
+
+ Validated with "https://jigsaw.w3.org/"
+*/
+
+/*Added smooth scrolling to allow for scrolling effect when navigating using the navbar. 
+Learned this from W3 Schools. Source "https://www.w3schools.com/howto/howto_css_smooth_scroll.asp"*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*Used a:link over just a due to Bootstrap overriding link color*/
+a:link{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: navy;
+    font-weight:bold;
+}
+
+a:visited{
+    color:navy;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+/*All h1s and h2s now use Open Sans*/
+h1, h2{
+    font-family: "Open Sans";
+}
+
+/*Spaced items in nav bar*/
+nav li{
+    padding-right: 40px;
+    padding-left: 20px;
+}
+
+/*Following 4 sections are for styling the header and subtitle in the Jumbotron, along with 
+the sizing of the jumbotron itself. Used Background image from following source:
+"https://www.pexels.com/photo/snow-top-mountain-under-clear-sky-1054218/"*/
+.display-4{
+    color:#b9b4b4;
+}
+header p{
+    font-style: italic;
+}
+.jumbotron .container{
+    padding-top: 8%;
+    padding-bottom: 20%;
+    color:white;
+}
+.jumbotron{
+    background-image: url("../images/mountain.jpg");
+    background-size:cover;
+}
+
+/*Styling for button in Jumbotron to jump to About Me section*/
+#LearnMore{
+    color:navy;
+    background-color: White;
+    margin-top:100px;
+    border-style:none;
+}
+
+/*set font for navbar brand and padding for navbar to add more vertical spacing
+Post from ZIM on StackOverflow Helped but could not change color of brand
+Source:"https://stackoverflow.com/questions/48716874/boostrap-navbar-how-to-change-text-color-on-navbar-brand-class"*/
+.navbar-light .navbar-brand{
+    font-family:"Open Sans";
+    font-size:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+/*Used White Segoe UI font for all text. Adding padding of 65px to following sections to prevent
+Navbar from overlapping section headings.
+Post from Matthew Berman on Stack Overflow helped in solving this issue.
+Source: "https://stackoverflow.com/questions/11124777/twitter-bootstrap-navbar-fixed-top-overlapping-site"*/
+body
+{
+    font-family: 'Segoe UI';
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:65px;
+}
+
+/*AboutMe now has image on top with paragraph on bottom, and is centered*/
+#AboutMe{
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+    padding-bottom:70px;
+    padding-top:65px;
+}
+
+#AboutMe p
+{
+    width:70%;
+}
+
+/*Styling for Image in About Me Section*/
+#Icon{
+    width: 250px;
+    height: 250px;
+    margin-top:71px;
+    margin-bottom:90px;
+}
+
+#Assignments{
+    padding-top:65px;
+    margin-top:10%;
+}
+
+/*Styling for label on Assignment Icons*/
+#Assignments a span{
+    display:block;
+    text-align:center;
+
+}
+
+/*Styling for Assignment links*/
+#Assignments a{
+    display:inline-block;
+    text-decoration: none;
+}
+/*Styling for assignment icon*/
+#Assignments img{
+
+    padding:50px;
+    width:300px;
+    height:300px;
+}
+
+/*Styling for list of courses*/
+#Courses{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5%;
+    padding-top:65px;
+    margin-bottom:10%;
+    width: 30%;
+    min-width:300px;
+}
+
+/*Added spacing between header and courses list*/
+#Courses h2{
+    padding-bottom:30px;
+}
+
+/*Added background color and top padding to space out contact section border
+and header*/
+#Contact
+{
+    text-align: center;
+    background-color:#609eb3;
+    color:white;
+    font-family:"Open Sans";
+    padding-top:20px;
+}
+
+#Contact p{
+    font-weight: bold;
+    font-style: italic;
+}
