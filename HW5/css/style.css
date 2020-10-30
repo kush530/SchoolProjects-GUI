@@ -1,0 +1,61 @@
+/*
+ File: /~kbpatel1/HW5/css/style.css
+ COMP.4060 Assignment 5: Multiplication Table Generator
+ Kush Patel, UMass Lowell Computer Science, kbpatel1@cs.uml.edu
+ Copyright (c) 2020 by Kush Patel. All rights reserved. May be
+freely
+ copied or excerpted for educational purposes with credit to the
+author.
+ updated by KP on October 29, 2020 at 8:22 PM
+
+ Description: Multiplication Table Generator CSS
+*/
+
+/*Centers Title for the Page*/
+#mainHeader{
+    text-align:center;
+}
+
+/*Centers text in the section containing the input form*/
+#table-input{
+    text-align:center;
+    padding-bottom:50px;
+}
+
+/*Sets color for table head*/
+th{
+
+    background-color: #222529;
+    color:white;
+}
+
+/*Sets every other cell in table to default color of striped
+table elements. Used W3Schools to find the right color.
+Source: "https://www.w3schools.com/howto/howto_css_table_zebra.asp"*/
+td:nth-child(even){
+    background-color:#f2f2f2;
+}
+
+/*Set height for parent container div for all page items in Order to prevent table
+from spanning endlessly down the page*/
+#parent{
+    height:100vh;
+}
+
+/*If table size exceeds page size, scrollbars will be added to view portions of the page
+which overflow*/
+#tableDiv{
+    overflow: auto;
+    max-height:50%;
+}
+
+/*Next two styles are used to keep Error message, and subtitle note about Non-integer inputs
+from being too close to the form items*/
+#errorDiv{
+    padding-top:10px;
+}
+#table-header-subtitle{
+    padding-top:10px;
+    padding-bottom:10px;
+    font-style:italic;
+}
