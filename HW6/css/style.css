@@ -53,6 +53,9 @@ which overflow*/
     padding-bottom:10px;
     font-style:italic;
 }
+/*Post by RJHunter on StackOverflow pointed me towards using the .error class for modifying
+error text
+Source: https://stackoverflow.com/questions/30053594/jquery-validation-message-colour*/
 .error{
     font-size:12px;
     font-style:italic;
