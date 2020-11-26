@@ -1,0 +1,95 @@
+<!--
+ File: /~kbpatel1/HW7/Multiplication.html
+ COMP.4060 Assignment 7: Multiplication Table Generator with Sliders and Tabs
+ Kush Patel, UMass Lowell Computer Science, kbpatel1@cs.uml.edu
+ Copyright (c) 2020 by Kush Patel. All rights reserved. May be
+freely
+ copied or excerpted for educational purposes with credit to the
+author.
+ updated by KP on November 25, 2020 at 10:00 PM
+
+ Description: Multiplication Table Generator created using Javascript,
+ and jQuery for input validation, UI Sliders and Tabs.
+-->
+
+<!DOCTYPE html>
+<html lang = en>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Multiplication Table</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    </head>
+    <body>
+        <div id = "parent" class="container">
+            <h1 id="mainHeader">Multiplication Table Generator, Version 1.0</h1>
+
+            <!--Section containing Form for Table Input and sliders-->
+
+            <div id = "table-input" class="row justify-content-center col-sm-6 col-sm-offset-3">
+                <h3 id = "table-input-header">Please enter the table ranges</h3>
+                <h5 id = "table-header-subtitle">Non-Integer Values Will be Rounded Down</h6>
+                <form role="form" id="tableInput" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="minColValue" class="col-sm-6 control-label">Minimum Column Value</label>
+                        <div class="col-sm-3">
+                            <input type="number" class="form-control" id="minColValue" name="minColValue" value="0">
+                        </div>
+                        <div class = "slider col-sm-3"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="maxColValue" class="col-sm-6 control-label">Maximum Column Value</label>
+                        <div class="col-sm-3">
+                            <input type="number" class="form-control" id="maxColValue" name="maxColValue" value="0">
+                        </div>
+                        <div class = "slider col-sm-3"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="minRowValue" class="col-sm-6 control-label">Minimum Row Value</label>
+                        <div class="col-sm-3">
+                            <input type="number" class="form-control" id="minRowValue" name="minRowValue" value="0">
+                        </div>
+                        <div class = "slider col-sm-3"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="maxRowValue" class="col-sm-6 control-label">Maximum Row Value</label>
+                        <div class="col-sm-3">
+                            <input type="number" class="form-control" id="maxRowValue" name="maxRowValue" value="0">
+                        </div>
+                        <div class = "slider col-sm-3"></div>
+                    </div>
+                </form>
+                <!--Row containing buttons to submit Table Parameters and reset entered values.
+                Reset button also clears the table, along with any error messages-->
+                <div class = "row">
+                    <div class="col-sm-3 col-sm-push-2">
+                        <input class ="btn btn-primary mx-auto" type="submit" value="Submit" id="submitButton">
+                    </div>
+                    <div class="col-md-3 col-sm-push-1 col-sm-4">
+                        <input class ="btn btn-danger mx-auto" type="reset"  value="Reset" id="resetButton">
+                    </div>
+                </div>
+            </div>
+            <!--Section where table tabs are created-->
+            <div id= "tableDiv" class="container">
+                 <!--Buttons for deleting tabs-->
+                <input class ="btn btn-primary mx-auto deletebtn" type="reset"  value="Delete Selected Tabs" id="deleteSelected">
+                <input class ="btn btn-danger mx-auto deletebtn" type="reset"  value="Delete All" id="deleteAll">
+                <!--Contains table tab links and resepective tab panels-->
+                <div id = "tabs">
+                    <ul id ="tablist">
+                    </ul>
+                </div>
+            </div>
+            <script type= "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script type= "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+            <script type= "text/javascript" src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+            <script type= "text/javascript" src="scripts/Validation.js"></script>
+            <script type= "text/javascript" src="scripts/MultApp.js"></script>
+            <script type= "text/javascript" src="scripts/Slider.js"></script>
+            <script type= "text/javascript" src="scripts/Tab.js"></script>
+        </div>
+    </body>
+</html>

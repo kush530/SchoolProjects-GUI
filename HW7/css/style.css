@@ -1,0 +1,100 @@
+/*
+ File: /~kbpatel1/HW7/css/style.css
+ COMP.4060 Assignment 7: Multiplication Table Generator with Sliders and Tabs
+ Kush Patel, UMass Lowell Computer Science, kbpatel1@cs.uml.edu
+ Copyright (c) 2020 by Kush Patel. All rights reserved. May be
+freely
+ copied or excerpted for educational purposes with credit to the
+author.
+ updated by KP on November 25, 2020 at 10:00 PM
+
+ Description: Multiplication Table Generator CSS
+*/
+
+/*Centers Title for the Page*/
+#mainHeader{
+    text-align:center;
+}
+
+/*Centers text in the section containing the input form*/
+#table-input{
+    text-align:center;
+    padding-bottom:50px;
+}
+
+/*Sets color for table head*/
+th{
+
+    background-color: #222529;
+    color:white;
+}
+
+/*Sets every other cell in table to default color of striped
+table elements. Used W3Schools to find the right color.
+Source: "https://www.w3schools.com/howto/howto_css_table_zebra.asp"*/
+td:nth-child(even){
+    background-color:#f2f2f2;
+}
+
+/*Set height for parent container div for all page items in Order to prevent table
+from spanning endlessly down the page*/
+#parent{
+    height:100vh;
+}
+
+/*If table size exceeds page size, scrollbars will be added to view portions of the page
+which overflow*/
+#tableDiv{
+    display:none;
+    overflow: auto;
+    max-height:50%;
+}
+/*adds scrollbars in tabs if table size exceed size of tab*/
+.tableTab {
+    overflow:auto;
+}
+#table-header-subtitle{
+    padding-top:10px;
+    padding-bottom:10px;
+    font-style:italic;
+}
+/*Post by RJHunter on StackOverflow pointed me towards using the .error class for modifying
+error text
+Source: https://stackoverflow.com/questions/30053594/jquery-validation-message-colour*/
+.error{
+    font-size:12px;
+    font-style:italic;
+    color:red;
+}
+
+.slider{
+    display: inline-block;
+}
+
+/*Page on css-tricks helped on learning to use !important to override default jQuery styles, after all
+other methods failed.
+Source: "https://css-tricks.com/when-using-important-is-the-right-choice/"*/
+.ui-slider-horizontal{
+    height: 20px !important;
+}
+.ui-slider .ui-slider-handle {
+    height: 22px !important;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -0.2em !important;
+    margin-left: -0.2em !important;
+}
+/*Styling for Close icon on tabs. W3Schools page on CSS Cursor property
+was helpful in changing cursor when hovering over close icon
+Source: "https://www.w3schools.com/cssref/pr_class_cursor.asp"*/
+.ui-icon {
+    display:inline-block !important;
+    cursor:pointer !important;
+    margin-left: 5px !important;
+}
+/*Styling for checkboxes on tabs*/
+.closeBox {
+    float: left;
+    margin-right: 5px !important;
+}
