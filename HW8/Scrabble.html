@@ -1,0 +1,60 @@
+<!--
+ File: /~kbpatel1/HW8/Scrabble.html
+ COMP.4060 Assignment 8: Scrabble
+ Kush Patel, UMass Lowell Computer Science, kbpatel1@cs.uml.edu
+ Copyright (c) 2020 by Kush Patel. All rights reserved. May be
+freely
+ copied or excerpted for educational purposes with credit to the
+author.
+ updated by KP on December 17, 2020 at 11:59 PM
+
+ Description: Scrabble game implemented using JQuery
+-->
+
+<!--JQuery Drag And Drop Cards Tutorial by Matt Doyle was instrumental in this assignment.
+Was helpful in implementing the HTML, scrabble, and had some CSS styling I liked
+Source: https://www.elated.com/drag-and-drop-with-jquery-your-essential-guide/-->
+
+<!DOCTYPE html>
+<html lang = en>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Scrabble</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    </head>
+    <body>
+        <!--Main container for page-->
+        <div id = "parent" class = "container">
+            <h1 id = "mainHeader">Scrabble V:1.0 Alpha</h1>
+            <h2 id ="winMessage" class = "text-success">Congrats You Have Used All Letters!!! Click Reset to Play Again!</h2>
+
+            <!--Container for the game itself-->
+            <div class="container" id="content">
+                <div class="container" id = "scoreSection">
+                    <h2 id = "lettersLeft" class = "scoreData">Letters Left: 0 </h2>
+                    <h2 id ="score" class = "scoreData">Score: 0</h2>
+                    <h2 id = "totalScore" class = "scoreData">Total Score: 0</h2>
+                </div>
+                <div id="dropSlots"></div>
+                <div id="rack"></div>
+    
+            </div>
+            <!--Contains buttons for submitting words and  resetting the game-->
+            <div id="Buttons" class="row">
+                <div class = "col-sm-6 col-md-push-4 col-sm-push-3">
+                    <button type = "button" class="btn btn-primary btn-lg scrabbleButton" onclick="submitWord()">Submit Word</button>
+                </div>
+                <div class = "col-sm-6 col-md-push 6">
+                    <button type = "button" class="btn btn-primary btn-lg scrabbleButton" onclick="init()">Reset</button>
+                </div>
+            </div>
+        </div>
+        <script type= "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type= "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+        <script type= "text/javascript" src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+        <script type= "text/javascript" src="scripts/scrabble.js"></script>
+    </body>
+</html>

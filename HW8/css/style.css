@@ -1,0 +1,105 @@
+/*
+ File: /~kbpatel1/HW8/css/style.css
+ COMP.4060 Assignment 8: Scrabble
+ Kush Patel, UMass Lowell Computer Science, kbpatel1@cs.uml.edu
+ Copyright (c) 2020 by Kush Patel. All rights reserved. May be
+freely
+ copied or excerpted for educational purposes with credit to the
+author.
+ updated by KP on December 17, 2020 at 11:59 PM
+
+ Description: CSS for scrabble game
+*/
+  body {
+    min-width:850px;
+    margin: 30px;
+    font-family: "helvetica";
+  }
+
+  #mainHeader {
+    text-align: center;
+  }
+
+  h2
+  {
+    text-align: center;
+  }
+
+  #content {
+    background:url("../images/board.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    margin-top:80px;
+    margin-right: 120px;
+    margin-left: 120px;
+    width: 850px;
+    padding:0px;
+    text-align: center;
+  }
+  
+  #rack {
+    background-image: url("../images/tileHolder.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+  }
+  
+  #dropSlots, #rack {
+    height: 215px;
+    padding: 20px;
+    padding-left:70px;
+    margin-bottom:40px;
+  }
+  
+  #dropSlots div {
+    float: left;
+    width: 95px;
+    height: 107px;
+    padding-top: 40px;
+    padding-bottom: 0;
+    border: 2px solid #333;
+  }
+
+  #rack div{
+    float: left;
+    width: 95px;
+    height: 107px;
+  }
+  
+  .defaultTile {
+    background:url("../images/ScrabbleBoardTiles/RegTile.PNG");
+    background-repeat: none;
+    background-size:contain;
+  }
+
+  .doubleTile {
+    background:url("../images/ScrabbleBoardTiles/DoubleTile.PNG");
+    background-repeat: none;
+    background-size:contain;
+  }
+
+  .scoreData{
+    float:left;
+    padding-left: 40px;
+  }
+
+  #scoreSection {
+    background-color:#0275d8;
+    width: 100%;
+    border-radius:5px;
+    margin: 0 auto;
+    color:white;
+  }
+
+  #Buttons {
+
+    padding-top: 30px;
+  }
+
+  /*Page on mozilla events was helpful in preventing ghost images of the tile images from
+  being dragged
+  Source: https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events*/
+  .letter{
+    width: 95px;
+    height: 107px;
+    pointer-events: none;
+  }
